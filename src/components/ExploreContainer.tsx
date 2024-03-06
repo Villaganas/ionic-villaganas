@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonButton } from '@ionic/react';
+import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonAlert, IonButton } from '@ionic/react';
 function Example() {
   return (
     <IonCard>
@@ -15,9 +15,14 @@ function Example() {
     <a href="https://web.facebook.com/bimbo.villaganas.71">
     <IonButton>View my Facebook Profile</IonButton>
     </a>
-    <a href="">
-    <IonButton>My Projects</IonButton>
-    </a>
+    <IonButton id="present-alert">View my projects</IonButton>
+      <IonAlert
+        trigger="present-alert"
+        header="Sorry, no project to be shown yet."
+        subHeader="The project is still in progress."
+        message="Please stay tuned for updates on the project."
+        buttons={['Ok']}
+      ></IonAlert>
   </>
     </IonCard>
     
